@@ -63,4 +63,4 @@ jobs:
       - name: Build and install helm chart
         run: |
           IMG=awx-operator-ci make helm-chart
-          helm install --wait my-awx-operator --create-namespace ./charts/awx-operator
+          helm install --wait my-awx-operator --create-namespace -n awx ./charts/awx-operator
