@@ -3,7 +3,8 @@ name: Promote AWX Operator image
 on:
   release:
     types: [published]
-
+  push:
+    branches: [devel]
 jobs:
   promote:
     runs-on: ubuntu-latest
