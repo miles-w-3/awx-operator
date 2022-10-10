@@ -31,10 +31,11 @@ jobs:
           git config user.name "$GITHUB_ACTOR"
           git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
-      - name: Release Helm chart
+      - name: Build Chart
         run: |
-          ansible-playbook ansible/helm-release.yml -v \
-            -e operator_image=quay.io/${{ github.repository }} \
-            -e chart_owner=${{ github.repository_owner }} \
-            -e tag=${{ github.event.release.tag_name }} \
-            -e gh_token=${{ secrets.GITHUB_TOKEN }}
+          make helm-package
+
+      - name: Run chart-releaser
+        uses: helm/chart-releaser-action@v1.4.1
+        env:
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
