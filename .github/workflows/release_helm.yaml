@@ -1,8 +1,9 @@
 name: Release Helm
 
-on:
-  push:
-    branches: ['devel']
+on: workflow_dispatch
+  # push:
+  #   branches: ['devel']
+  #workflow_dispatch:
 
 jobs:
   release:
