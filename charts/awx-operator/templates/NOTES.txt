@@ -1,0 +1,1 @@
+AWX Operator installed with Helm Chart version 0.26.0-60-gfd44676
