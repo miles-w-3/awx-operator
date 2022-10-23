@@ -2,16 +2,6 @@ apiVersion: v1
 entries:
   awx-operator:
   - apiVersion: v2
-    appVersion: 0.30.0
-    created: "2022-10-05T15:36:26.2106302+02:00"
-    description: A Helm chart for the AWX Operator
-    digest: 9844a92b43af1b9fd988c6c77ce8ab2943f47d25aba77e9195f1cf6310d33373
-    name: awx-operator
-    type: application
-    urls:
-    - https://github.com/ansible/awx-operator/releases/download/0.30.0/awx-operator-0.30.0.tgz
-    version: 0.30.0
-  - apiVersion: v2
     appVersion: 0.29.0
     created: "2022-10-05T15:36:26.0082721+02:00"
     description: A Helm chart for the AWX Operator
